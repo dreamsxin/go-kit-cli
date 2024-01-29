@@ -2,7 +2,7 @@
 
 package transport
 
-import usersvc "github.com/recolabs/microgen/examples/usersvc/pkg/usersvc"
+import usersvc "github.com/dreamsxin/go-kitcli/examples/usersvc/pkg/usersvc"
 
 type (
 	CreateUserRequest struct {

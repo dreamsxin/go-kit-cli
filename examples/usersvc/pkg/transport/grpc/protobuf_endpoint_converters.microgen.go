@@ -6,9 +6,9 @@ package transportgrpc
 import (
 	"context"
 	"errors"
-	empty "github.com/golang/protobuf/ptypes/empty"
-	pb "github.com/recolabs/microgen/examples/protobuf"
-	transport "github.com/recolabs/microgen/examples/usersvc/pkg/transport"
+	empty "google.golang.org/protobuf/types/known/emptypb"
+	pb "github.com/dreamsxin/go-kitcli/examples/protobuf"
+	transport "github.com/dreamsxin/go-kitcli/examples/usersvc/pkg/transport"
 )
 
 func _Encode_CreateUser_Request(ctx context.Context, request interface{}) (interface{}, error) {

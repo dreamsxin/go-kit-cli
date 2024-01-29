@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 
 	. "github.com/dave/jennifer/jen"
-	mstrings "github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 	"github.com/vetcher/go-astra/types"
 )
 
@@ -91,7 +91,7 @@ func (t *httpConverterTemplate) Prepare(ctx context.Context) error {
 //			bytes "bytes"
 //			context "context"
 //			json "encoding/json"
-//			svc "github.com/recolabs/microgen/examples/svc"
+//			svc "github.com/dreamsxin/go-kitcli/examples/svc"
 //			ioutil "io/ioutil"
 //			http "net/http"
 //		)

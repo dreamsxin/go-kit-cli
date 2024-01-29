@@ -4,9 +4,9 @@ import (
 	"context"
 
 	. "github.com/dave/jennifer/jen"
-	"github.com/recolabs/microgen/generator/strings"
-	mstrings "github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	"github.com/dreamsxin/go-kitcli/generator/strings"
+	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 	"github.com/vetcher/go-astra/types"
 )
 

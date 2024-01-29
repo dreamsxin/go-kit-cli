@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	mstrings "github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/template"
+	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/template"
 	"github.com/vetcher/go-astra/types"
 )
 

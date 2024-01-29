@@ -6,9 +6,9 @@ package transportgrpc
 import (
 	"context"
 	"errors"
-	empty "github.com/golang/protobuf/ptypes/empty"
-	transport "github.com/recolabs/microgen/examples/generated/transport"
-	pb "github.com/recolabs/microgen/examples/protobuf"
+	empty "google.golang.org/protobuf/types/known/emptypb"
+	transport "github.com/dreamsxin/go-kitcli/examples/generated/transport"
+	pb "github.com/dreamsxin/go-kitcli/examples/protobuf"
 )
 
 func _Encode_Uppercase_Request(ctx context.Context, request interface{}) (interface{}, error) {

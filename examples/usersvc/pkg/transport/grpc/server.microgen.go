@@ -7,10 +7,10 @@ import (
 	log "github.com/go-kit/kit/log"
 	opentracing "github.com/go-kit/kit/tracing/opentracing"
 	grpc "github.com/go-kit/kit/transport/grpc"
-	empty "github.com/golang/protobuf/ptypes/empty"
+	empty "google.golang.org/protobuf/types/known/emptypb"
 	opentracinggo "github.com/opentracing/opentracing-go"
-	pb "github.com/recolabs/microgen/examples/protobuf"
-	transport "github.com/recolabs/microgen/examples/usersvc/pkg/transport"
+	pb "github.com/dreamsxin/go-kitcli/examples/protobuf"
+	transport "github.com/dreamsxin/go-kitcli/examples/usersvc/pkg/transport"
 	context "golang.org/x/net/context"
 )
 

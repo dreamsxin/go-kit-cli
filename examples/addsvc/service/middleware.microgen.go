@@ -2,7 +2,7 @@
 
 package service
 
-import service "github.com/recolabs/microgen/examples/addsvc/addsvc"
+import service "github.com/dreamsxin/go-kitcli/examples/addsvc/addsvc"
 
 // Service middleware (closure).
 type Middleware func(service.Service) service.Service

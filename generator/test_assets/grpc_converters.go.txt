@@ -4,7 +4,7 @@ package protobuf
 
 import (
 	context "context"
-	testout "github.com/recolabs/microgen/generator/test_out"
+	testout "github.com/dreamsxin/go-kitcli/generator/test_out"
 	stringsvc "github.com/recolabs/protobuf/stringsvc"
 )
 

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	. "github.com/dave/jennifer/jen"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 )
 
 const (
@@ -27,7 +27,7 @@ func NewMiddlewareTemplate(info *GenerationInfo) Template {
 //		// DO NOT EDIT.
 //		package middleware
 //
-//		import svc "github.com/recolabs/microgen/examples/svc"
+//		import svc "github.com/dreamsxin/go-kitcli/examples/svc"
 //
 //		type Middleware func(svc.StringService) svc.StringService
 //

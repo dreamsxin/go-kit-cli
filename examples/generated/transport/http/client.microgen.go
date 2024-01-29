@@ -10,7 +10,7 @@ import (
 	opentracing "github.com/go-kit/kit/tracing/opentracing"
 	httpkit "github.com/go-kit/kit/transport/http"
 	opentracinggo "github.com/opentracing/opentracing-go"
-	transport "github.com/recolabs/microgen/examples/generated/transport"
+	transport "github.com/dreamsxin/go-kitcli/examples/generated/transport"
 	"io"
 	"net/url"
 )

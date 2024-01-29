@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	. "github.com/dave/jennifer/jen"
-	"github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	"github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 	"github.com/vetcher/go-astra/types"
 )
 
@@ -38,8 +38,8 @@ func (t *httpClientTemplate) Prepare(ctx context.Context) error {
 //		package transporthttp
 //
 //		import (
-//			svc "github.com/recolabs/microgen/examples/svc"
-//			http1 "github.com/recolabs/microgen/examples/svc/transport/converter/http"
+//			svc "github.com/dreamsxin/go-kitcli/examples/svc"
+//			http1 "github.com/dreamsxin/go-kitcli/examples/svc/transport/converter/http"
 //			http "github.com/go-kit/kit/transport/http"
 //			url "net/url"
 //			strings "strings"

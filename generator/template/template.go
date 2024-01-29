@@ -3,7 +3,7 @@ package template
 import (
 	"context"
 
-	"github.com/recolabs/microgen/generator/write_strategy"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 )
 
 type Template interface {

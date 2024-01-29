@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/recolabs/microgen/generator/template"
+	"github.com/dreamsxin/go-kitcli/generator/template"
 )
 
 type writerStrategy struct {

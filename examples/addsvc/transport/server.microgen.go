@@ -7,7 +7,7 @@ import (
 	endpoint "github.com/go-kit/kit/endpoint"
 	opentracing "github.com/go-kit/kit/tracing/opentracing"
 	opentracinggo "github.com/opentracing/opentracing-go"
-	addsvc "github.com/recolabs/microgen/examples/addsvc/addsvc"
+	addsvc "github.com/dreamsxin/go-kitcli/examples/addsvc/addsvc"
 )
 
 func Endpoints(svc addsvc.Service) EndpointsSet {

@@ -8,7 +8,7 @@ import (
 	http "github.com/go-kit/kit/transport/http"
 	mux "github.com/gorilla/mux"
 	opentracinggo "github.com/opentracing/opentracing-go"
-	transport "github.com/recolabs/microgen/examples/usersvc/pkg/transport"
+	transport "github.com/dreamsxin/go-kitcli/examples/usersvc/pkg/transport"
 	http1 "net/http"
 )
 

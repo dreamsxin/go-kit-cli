@@ -2,7 +2,7 @@
 
 package transport
 
-import generated "github.com/recolabs/microgen/examples/generated"
+import generated "github.com/dreamsxin/go-kitcli/examples/generated"
 
 type (
 	UppercaseRequest struct {

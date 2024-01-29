@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	. "github.com/dave/jennifer/jen"
-	mstrings "github.com/recolabs/microgen/generator/strings"
+	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
 	"github.com/vetcher/go-astra/types"
 )
 
@@ -31,7 +31,7 @@ const (
 	PackagePathIO                    = "io"
 	PackagePathStrings               = "strings"
 	PackagePathUrl                   = "net/url"
-	PackagePathEmptyProtobuf         = "github.com/golang/protobuf/ptypes/empty"
+	PackagePathEmptyProtobuf         = "google.golang.org/protobuf/types/known/emptypb"
 	PackagePathFmt                   = "fmt"
 	PackagePathOs                    = "os"
 	PackagePathOsSignal              = "os/signal"

@@ -18,7 +18,7 @@ The goal is to generate code for service which not fun to write but it should be
 
 ## Install
 ```
-go install github.com/recolabs/microgen/cmd/microgen@latest
+go install github.com/dreamsxin/go-kitcli/cmd/microgen@latest
 ```
 
 Note: If you have problems with building microgen, please clone the repository, and run 
@@ -305,11 +305,11 @@ package stringsvc
 import (
 	"context"
 
-	"github.com/recolabs/microgen/example/svc/entity"
+	"github.com/dreamsxin/go-kitcli/example/svc/entity"
 )
 
 // @microgen middleware, logging, grpc, http, recovering, main
-// @protobuf github.com/recolabs/microgen/example/protobuf
+// @protobuf github.com/dreamsxin/go-kitcli/example/protobuf
 type StringService interface {
 	// @logs-ignore ans, err
 	Uppercase(ctx context.Context, stringsMap map[string]string) (ans string, err error)
@@ -353,5 +353,5 @@ After generation your service may depend on this packages:
     "google.golang.org/grpc"                    // for grpc purposes
     "golang.org/x/net/context"
     "github.com/go-kit/kit"                     // for grpc purposes
-    "github.com/golang/protobuf/ptypes/empty"   // for grpc purposes
+    empty "google.golang.org/protobuf/types/known/emptypb"   // for grpc purposes
 ```

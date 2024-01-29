@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 	log "github.com/go-kit/kit/log"
-	service "github.com/recolabs/microgen/examples/usersvc/pkg/usersvc"
+	service "github.com/dreamsxin/go-kitcli/examples/usersvc/pkg/usersvc"
 )
 
 // RecoveringMiddleware recovers panics from method calls, writes to provided logger and returns the error of panic as method error.

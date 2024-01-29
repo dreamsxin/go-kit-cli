@@ -57,8 +57,8 @@ Like any Go file, you need to specify the package and the imports. This is not s
 🟩 4      	"context"
 🟩 5      
 🟩 6      	. "github.com/dave/jennifer/jen"
-🟩 7      	mstrings "github.com/recolabs/microgen/generator/strings"
-🟩 8      	"github.com/recolabs/microgen/generator/write_strategy"
+🟩 7      	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
+🟩 8      	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 🟩 9      	"github.com/vetcher/go-astra/types"
 🟩 10     )
 ```
@@ -177,7 +177,7 @@ This is the fun part! First, read the example output. This is how the output of 
 🟩 39     //
 🟩 40     //		import (
 🟩 41     //			context "context"
-🟩 42     //			svc "github.com/recolabs/microgen/examples/svc"
+🟩 42     //			svc "github.com/dreamsxin/go-kitcli/examples/svc"
 🟩 43     //			log "github.com/go-kit/kit/log"
 🟩 44     //			time "time"
 🟩 45     //		)

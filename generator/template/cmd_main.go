@@ -6,8 +6,8 @@ import (
 	"context"
 
 	. "github.com/dave/jennifer/jen"
-	mstrings "github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 )
 
 const (

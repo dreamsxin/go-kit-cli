@@ -7,7 +7,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
-	transport "github.com/recolabs/microgen/examples/usersvc/pkg/transport"
+	transport "github.com/dreamsxin/go-kitcli/examples/usersvc/pkg/transport"
 	"io/ioutil"
 	"net/http"
 	"path"

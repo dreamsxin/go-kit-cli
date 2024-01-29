@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	. "github.com/dave/jennifer/jen"
-	mstrings "github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 	"github.com/vetcher/go-astra/types"
 )
 
@@ -35,8 +35,8 @@ func privateServerStructName(iface *types.Interface) string {
 //		package transportgrpc
 //
 //		import (
-//			svc "github.com/recolabs/microgen/examples/svc"
-//			protobuf "github.com/recolabs/microgen/examples/svc/transport/converter/protobuf"
+//			svc "github.com/dreamsxin/go-kitcli/examples/svc"
+//			protobuf "github.com/dreamsxin/go-kitcli/examples/svc/transport/converter/protobuf"
 //			grpc "github.com/go-kit/kit/transport/grpc"
 //			stringsvc "gitlab.devim.team/protobuf/stringsvc"
 //			context "golang.org/x/net/context"

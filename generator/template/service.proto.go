@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	"github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 	"github.com/vetcher/go-astra/types"
 )
 

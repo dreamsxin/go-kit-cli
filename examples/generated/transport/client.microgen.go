@@ -7,7 +7,7 @@ import (
 	"errors"
 	opentracing "github.com/go-kit/kit/tracing/opentracing"
 	opentracinggo "github.com/opentracing/opentracing-go"
-	generated "github.com/recolabs/microgen/examples/generated"
+	generated "github.com/dreamsxin/go-kitcli/examples/generated"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
 )

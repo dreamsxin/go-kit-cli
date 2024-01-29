@@ -5,7 +5,7 @@ import (
 	"errors"
 
 	. "github.com/dave/jennifer/jen"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 	"github.com/vetcher/go-astra/types"
 )
 
@@ -30,8 +30,8 @@ func NewGRPCClientTemplate(info *GenerationInfo) Template {
 //		package transportgrpc
 //
 //		import (
-//			svc "github.com/recolabs/microgen/examples/svc"
-//			protobuf "github.com/recolabs/microgen/examples/svc/transport/converter/protobuf"
+//			svc "github.com/dreamsxin/go-kitcli/examples/svc"
+//			protobuf "github.com/dreamsxin/go-kitcli/examples/svc/transport/converter/protobuf"
 //			grpc1 "github.com/go-kit/kit/transport/grpc"
 //			stringsvc "gitlab.devim.team/protobuf/stringsvc"
 //			grpc "google.golang.org/grpc"

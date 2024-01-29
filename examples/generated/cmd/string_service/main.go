@@ -14,12 +14,12 @@ import (
 
 	log "github.com/go-kit/kit/log"
 	opentracinggo "github.com/opentracing/opentracing-go"
-	generated "github.com/recolabs/microgen/examples/generated"
-	service "github.com/recolabs/microgen/examples/generated/service"
-	transport "github.com/recolabs/microgen/examples/generated/transport"
-	grpc "github.com/recolabs/microgen/examples/generated/transport/grpc"
-	http "github.com/recolabs/microgen/examples/generated/transport/http"
-	protobuf "github.com/recolabs/microgen/examples/protobuf"
+	generated "github.com/dreamsxin/go-kitcli/examples/generated"
+	service "github.com/dreamsxin/go-kitcli/examples/generated/service"
+	transport "github.com/dreamsxin/go-kitcli/examples/generated/transport"
+	grpc "github.com/dreamsxin/go-kitcli/examples/generated/transport/grpc"
+	http "github.com/dreamsxin/go-kitcli/examples/generated/transport/http"
+	protobuf "github.com/dreamsxin/go-kitcli/examples/protobuf"
 	errgroup "golang.org/x/sync/errgroup"
 	grpc1 "google.golang.org/grpc"
 )

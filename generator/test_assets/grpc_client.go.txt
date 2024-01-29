@@ -3,8 +3,8 @@
 package transportgrpc
 
 import (
-	testout "github.com/recolabs/microgen/generator/test_out"
-	protobuf "github.com/recolabs/microgen/generator/test_out/transport/converter/protobuf"
+	testout "github.com/dreamsxin/go-kitcli/generator/test_out"
+	protobuf "github.com/dreamsxin/go-kitcli/generator/test_out/transport/converter/protobuf"
 	stringsvc "github.com/recolabs/protobuf/stringsvc"
 	grpc1 "github.com/go-kit/kit/transport/grpc"
 	grpc "google.golang.org/grpc"

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/recolabs/microgen/examples/protobuf;pb";
+option go_package = "github.com/dreamsxin/go-kitcli/examples/protobuf;pb";
 
 package service.string;
 

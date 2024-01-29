@@ -9,8 +9,8 @@ import (
 
 	"context"
 
-	strings2 "github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/template"
+	strings2 "github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/template"
 	"github.com/stretchr/testify/assert"
 	"github.com/vetcher/go-astra"
 	"github.com/vetcher/go-astra/types"

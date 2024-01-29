@@ -3,7 +3,7 @@ package usersvc
 import "context"
 
 // @microgen middleware, logging, grpc, http, recovering, error-logging, tracing, caching, metrics
-// @protobuf github.com/recolabs/microgen/examples/protobuf
+// @protobuf github.com/dreamsxin/go-kitcli/examples/protobuf
 type UserService interface {
 	CreateUser(ctx context.Context, user User) (id string, err error)
 	UpdateUser(ctx context.Context, user User) (err error)

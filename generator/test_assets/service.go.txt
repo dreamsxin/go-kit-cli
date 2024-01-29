@@ -3,7 +3,7 @@ package stringsvc
 import (
 	"context"
 
-	"github.com/recolabs/microgen/example/svc/entity"
+	"github.com/dreamsxin/go-kitcli/example/svc/entity"
 )
 
 // @microgen middleware, logging, grpc, http, recover, main

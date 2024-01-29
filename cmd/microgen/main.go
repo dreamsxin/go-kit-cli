@@ -12,10 +12,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/recolabs/microgen/generator"
-	mstrings "github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/template"
-	lg "github.com/recolabs/microgen/logger"
+	"github.com/dreamsxin/go-kitcli/generator"
+	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/template"
+	lg "github.com/dreamsxin/go-kitcli/logger"
 	"github.com/vetcher/go-astra"
 	"github.com/vetcher/go-astra/types"
 )

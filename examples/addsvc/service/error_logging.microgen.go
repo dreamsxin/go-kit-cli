@@ -5,7 +5,7 @@ package service
 import (
 	"context"
 	log "github.com/go-kit/kit/log"
-	service "github.com/recolabs/microgen/examples/addsvc/addsvc"
+	service "github.com/dreamsxin/go-kitcli/examples/addsvc/addsvc"
 )
 
 // ErrorLoggingMiddleware writes to logger any error, if it is not nil.

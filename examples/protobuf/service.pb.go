@@ -18,10 +18,10 @@ It has these top-level messages:
 */
 package protobuf
 
-import proto "github.com/golang/protobuf/proto"
+import proto "google.golang.org/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import google_protobuf "github.com/golang/protobuf/ptypes/timestamp"
+import google_protobuf "google.golang.org/protobuf/types/known/timestamppb"
 
 import (
 	context "golang.org/x/net/context"

@@ -9,7 +9,7 @@ import (
 	"path"
 	"path/filepath"
 
-	lg "github.com/recolabs/microgen/logger"
+	lg "github.com/dreamsxin/go-kitcli/logger"
 )
 
 const (

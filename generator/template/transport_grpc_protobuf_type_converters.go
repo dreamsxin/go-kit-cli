@@ -8,17 +8,17 @@ import (
 	"strings"
 
 	. "github.com/dave/jennifer/jen"
-	mstrings "github.com/recolabs/microgen/generator/strings"
-	"github.com/recolabs/microgen/generator/write_strategy"
-	"github.com/recolabs/microgen/logger"
+	mstrings "github.com/dreamsxin/go-kitcli/generator/strings"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
+	"github.com/dreamsxin/go-kitcli/logger"
 	"github.com/vetcher/go-astra/types"
 )
 
 const (
-	GolangProtobufPtypesTimestamp = "github.com/golang/protobuf/ptypes/timestamp"
+	GolangProtobufPtypesTimestamp = "google.golang.org/protobuf/types/known/timestamppb"
 	JsonbPackage                  = "github.com/sas1024/gorm-jsonb/jsonb"
-	GolangProtobufPtypes          = "github.com/golang/protobuf/ptypes"
-	GolangProtobufWrappers        = "github.com/golang/protobuf/ptypes/wrappers"
+	GolangProtobufPtypes          = "google.golang.org/protobuf/types"
+	GolangProtobufWrappers        = "google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 type stubGRPCTypeConverterTemplate struct {

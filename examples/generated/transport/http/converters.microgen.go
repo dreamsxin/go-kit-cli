@@ -9,7 +9,7 @@ import (
 	"encoding/json"
 	"errors"
 	mux "github.com/gorilla/mux"
-	transport "github.com/recolabs/microgen/examples/generated/transport"
+	transport "github.com/dreamsxin/go-kitcli/examples/generated/transport"
 	"io/ioutil"
 	"net/http"
 	"path"

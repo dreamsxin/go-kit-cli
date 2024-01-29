@@ -6,8 +6,8 @@ package transportgrpc
 import (
 	"context"
 	"errors"
-	transport "github.com/recolabs/microgen/examples/addsvc/transport"
-	pb "github.com/recolabs/microgen/examples/protobuf"
+	transport "github.com/dreamsxin/go-kitcli/examples/addsvc/transport"
+	pb "github.com/dreamsxin/go-kitcli/examples/protobuf"
 )
 
 func _Encode_Sum_Request(ctx context.Context, request interface{}) (interface{}, error) {

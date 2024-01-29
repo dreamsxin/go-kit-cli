@@ -6,10 +6,10 @@ import (
 	log "github.com/go-kit/kit/log"
 	opentracing "github.com/go-kit/kit/tracing/opentracing"
 	grpckit "github.com/go-kit/kit/transport/grpc"
-	empty "github.com/golang/protobuf/ptypes/empty"
+	empty "google.golang.org/protobuf/types/known/emptypb"
 	opentracinggo "github.com/opentracing/opentracing-go"
-	transport "github.com/recolabs/microgen/examples/generated/transport"
-	pb "github.com/recolabs/microgen/examples/protobuf"
+	transport "github.com/dreamsxin/go-kitcli/examples/generated/transport"
+	pb "github.com/dreamsxin/go-kitcli/examples/protobuf"
 	grpc "google.golang.org/grpc"
 )
 

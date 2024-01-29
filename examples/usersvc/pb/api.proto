@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/recolabs/microgen/examples/usersvc/pb;pb";
+option go_package = "github.com/dreamsxin/go-kitcli/examples/usersvc/pb;pb";
 
 package service.usersvc;
 

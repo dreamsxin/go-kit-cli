@@ -7,8 +7,8 @@ import (
 	opentracing "github.com/go-kit/kit/tracing/opentracing"
 	grpckit "github.com/go-kit/kit/transport/grpc"
 	opentracinggo "github.com/opentracing/opentracing-go"
-	transport "github.com/recolabs/microgen/examples/addsvc/transport"
-	pb "github.com/recolabs/microgen/examples/protobuf"
+	transport "github.com/dreamsxin/go-kitcli/examples/addsvc/transport"
+	pb "github.com/dreamsxin/go-kitcli/examples/protobuf"
 	grpc "google.golang.org/grpc"
 )
 

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/recolabs/microgen/generator/template"
-	"github.com/recolabs/microgen/generator/write_strategy"
+	"github.com/dreamsxin/go-kitcli/generator/template"
+	"github.com/dreamsxin/go-kitcli/generator/write_strategy"
 )
 
 const (

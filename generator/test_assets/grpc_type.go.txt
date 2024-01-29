@@ -4,7 +4,7 @@
 package protobuf
 
 import (
-	entity "github.com/recolabs/microgen/example/svc/entity"
+	entity "github.com/dreamsxin/go-kitcli/example/svc/entity"
 	stringsvc "github.com/recolabs/protobuf/stringsvc"
 )
 

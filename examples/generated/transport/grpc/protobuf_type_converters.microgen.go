@@ -5,8 +5,8 @@
 package transportgrpc
 
 import (
-	service "github.com/recolabs/microgen/examples/generated"
-	pb "github.com/recolabs/microgen/examples/protobuf"
+	service "github.com/dreamsxin/go-kitcli/examples/generated"
+	pb "github.com/dreamsxin/go-kitcli/examples/protobuf"
 )
 
 func MapStringStringToProto(stringsMap map[string]string) (map[string]string, error) {
