@@ -16,7 +16,7 @@ import (
 const (
 	PackagePathGoKitEndpoint         = "github.com/go-kit/kit/endpoint"
 	PackagePathContext               = "context"
-	PackagePathGoKitLog              = "github.com/go-kit/kit/log"
+	PackagePathGoKitLog              = "github.com/go-kit/log"
 	PackagePathTime                  = "time"
 	PackagePathGoogleGRPC            = "google.golang.org/grpc"
 	PackagePathGoogleGRPCStatus      = "google.golang.org/grpc/status"

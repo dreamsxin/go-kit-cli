@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"go/format"
-	"io/ioutil"
 	"os"
 	"path"
 	"path/filepath"
@@ -51,15 +50,16 @@ func (s createFileStrategy) Write(renderer Renderer) error {
 
 	err = s.Save(renderer, outpath)
 	if err != nil {
+		lg.Logger.Logln(lg.ERROR, "save file", outpath, "err", err)
 		return fmt.Errorf("error when save file: %v", err)
 	}
 	return nil
 }
 
 // Copied from original github.com/dave/jennifer/jen.go func Save()
-func (s createFileStrategy) Save(f Renderer, filename string) error {
+func (s createFileStrategy) Save(renderer Renderer, filename string) error {
 	buf := &bytes.Buffer{}
-	if err := f.Render(buf); err != nil {
+	if err := renderer.Render(buf); err != nil {
 		return err
 	}
 	// Stop saving because nothing to save
@@ -75,7 +75,17 @@ func (s createFileStrategy) Save(f Renderer, filename string) error {
 			return fmt.Errorf("error when format source: %v", err)
 		}
 	}
-	if err := ioutil.WriteFile(filename, formatted, 0644); err != nil {
+	dirpath := filepath.Dir(filename)
+	err = os.MkdirAll(dirpath, os.ModePerm)
+	if err != nil {
+		lg.Logger.Logln(lg.ERROR, err)
+	}
+	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	if _, err = f.Write(formatted); err != nil {
 		return err
 	}
 	lg.Logger.Logln(2, NewFileMark, filepath.Join(s.absPath, s.relPath))
@@ -138,6 +148,7 @@ func (s appendFileStrategy) Write(renderer Renderer) error {
 
 	err = s.Save(renderer, outpath)
 	if err != nil {
+		lg.Logger.Logln(lg.ERROR, "save file", outpath, "err", err)
 		return fmt.Errorf("error when save file: %v", err)
 	}
 	return nil
@@ -160,10 +171,16 @@ func (s appendFileStrategy) Save(renderer Renderer, filename string) error {
 		return fmt.Errorf("error when format source: %v", err)
 	}
 
-	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY, 0644)
+	dirpath := filepath.Dir(filename)
+	err = os.MkdirAll(dirpath, os.ModePerm)
+	if err != nil {
+		lg.Logger.Logln(lg.ERROR, err)
+	}
+	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
 	if err != nil {
 		return err
 	}
+	defer f.Close()
 	if _, err = f.Write(formatted[len(formatTrick):]); err != nil {
 		return err
 	}

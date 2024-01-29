@@ -3,9 +3,10 @@ module github.com/dreamsxin/go-kitcli
 go 1.16
 
 require (
-	github.com/dave/jennifer v1.4.1
+	github.com/dave/jennifer v1.7.0
 	github.com/fatih/structtag v1.2.0 // indirect
 	github.com/go-kit/kit v0.12.0
+	github.com/go-kit/log v0.2.0
 	github.com/gorilla/mux v1.8.0
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/stretchr/testify v1.7.0

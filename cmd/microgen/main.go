@@ -6,7 +6,6 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -51,7 +50,7 @@ func readFromInput(prefix string, delim byte) (string, error) {
 }
 
 func findPackageNameFromGoModFile(filePath string) (string, error) {
-	buffer, err := ioutil.ReadFile(filePath)
+	buffer, err := os.ReadFile(filePath)
 	if err != nil {
 		return "", err
 	}
@@ -75,7 +74,7 @@ const (
 func main() {
 	lg.Logger.Level = *flagVerbose
 	if *flagDebug {
-		lg.Logger.Level = 100
+		lg.Logger.Level = lg.DEBUG
 	}
 	lg.Logger.Logln(1, "@microgen", Version)
 	if *flagHelp {
@@ -86,10 +85,11 @@ func main() {
 	if *flagFileName == "" {
 		val, err := readFromInput("file path with interfaces: ", '\n')
 		if err != nil {
-			lg.Logger.Logln(0, "fatal:", err)
+			lg.Logger.Logln(lg.ERROR, "fatal:", err)
 			os.Exit(1)
 		}
 		if val == "" {
+			lg.Logger.Logln(lg.ERROR, "fatal:", "interfaces file path required")
 			flag.Usage()
 			os.Exit(0)
 		}
@@ -102,13 +102,14 @@ func main() {
 		printLine := fmt.Sprintf("output directory [%v]: ", defaultDir)
 		val, err := readFromInput(printLine, '\n')
 		if err != nil {
-			lg.Logger.Logln(0, "fatal:", err)
+			lg.Logger.Logln(lg.ERROR, "fatal:", err)
 			os.Exit(1)
 		}
 		if val != "" {
 			*flagOutputDir = val
 		}
 		if *flagOutputDir == "" {
+			lg.Logger.Logln(lg.ERROR, "fatal:", "output directory required")
 			flag.Usage()
 			os.Exit(0)
 		}
@@ -120,13 +121,14 @@ func main() {
 		printLine := fmt.Sprintf("pacakge name for imports [%v]: ", defaultPackageName)
 		val, err := readFromInput(printLine, '\n')
 		if err != nil {
-			lg.Logger.Logln(0, "fatal:", err)
+			lg.Logger.Logln(lg.ERROR, "fatal:", err)
 			os.Exit(1)
 		}
 		if val != "" {
 			*flagPackageName = val
 		}
 		if *flagPackageName == "" {
+			lg.Logger.Logln(lg.ERROR, "fatal:", "package name required")
 			flag.Usage()
 			os.Exit(0)
 		}
@@ -135,7 +137,7 @@ func main() {
 	if *flagPbGoFileName == "" {
 		val, err := readFromInput("path to XXX_service.pb.go (leave empty for no pb validation): ", '\n')
 		if err != nil {
-			lg.Logger.Logln(0, "fatal:", err)
+			lg.Logger.Logln(lg.ERROR, "fatal:", err)
 			os.Exit(1)
 		}
 
@@ -145,51 +147,51 @@ func main() {
 	lg.Logger.Logln(4, "Source file:", *flagFileName)
 	info, err := astra.ParseFile(*flagFileName)
 	if err != nil {
-		lg.Logger.Logln(0, "fatal:", err)
+		lg.Logger.Logln(lg.ERROR, "fatal:", err)
 		os.Exit(1)
 	}
 	var pbGoFile *types.File = nil
 	if *flagPbGoFileName != "" {
 		pbGoFile, err = astra.ParseFile(*flagPbGoFileName)
 		if err != nil {
-			lg.Logger.Logln(0, "fatal:", err)
+			lg.Logger.Logln(lg.ERROR, "fatal:", err)
 			os.Exit(1)
 		}
 	}
 
 	i := findInterface(info)
 	if i == nil {
-		lg.Logger.Logln(0, "fatal: could not find interface with @microgen tag")
-		lg.Logger.Logln(4, "All founded interfaces:")
-		lg.Logger.Logln(4, listInterfaces(info.Interfaces))
+		lg.Logger.Logln(lg.ERROR, "fatal: could not find interface with @microgen tag")
+		lg.Logger.Logln(lg.DEBUG, "All founded interfaces:")
+		lg.Logger.Logln(lg.DEBUG, listInterfaces(info.Interfaces))
 		os.Exit(1)
 	}
 
 	if err := generator.ValidateInterface(i, pbGoFile); err != nil {
-		lg.Logger.Logln(0, "validation:", err)
+		lg.Logger.Logln(lg.ERROR, "validation:", err)
 		os.Exit(1)
 	}
 
 	ctx, err := prepareContext(*flagFileName, i)
 	if err != nil {
-		lg.Logger.Logln(0, "fatal:", err)
+		lg.Logger.Logln(lg.ERROR, "fatal:", err)
 		os.Exit(1)
 	}
 
 	absOutputDir, err := filepath.Abs(*flagOutputDir)
 	if err != nil {
-		lg.Logger.Logln(0, "fatal:", err)
+		lg.Logger.Logln(lg.ERROR, "fatal:", err)
 		os.Exit(1)
 	}
 	units, err := generator.ListTemplatesForGen(ctx, i, absOutputDir, *flagFileName, *flagPackageName, *flagGenProtofile, *flagGenMain)
 	if err != nil {
-		lg.Logger.Logln(0, "fatal:", err)
+		lg.Logger.Logln(lg.ERROR, "fatal:", err)
 		os.Exit(1)
 	}
 	for _, unit := range units {
 		err := unit.Generate(ctx)
 		if err != nil && err != generator.EmptyStrategyError {
-			lg.Logger.Logln(0, "fatal:", unit.Path(), err)
+			lg.Logger.Logln(lg.ERROR, "fatal:", unit.Path(), err)
 			os.Exit(1)
 		}
 	}

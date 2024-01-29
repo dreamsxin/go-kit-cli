@@ -6,7 +6,7 @@ import (
 	context "context"
 	entity "github.com/dreamsxin/go-kitcli/example/svc/entity"
 	testout "github.com/dreamsxin/go-kitcli/generator/test_out"
-	log "github.com/go-kit/kit/log"
+	log "github.com/go-kit/log"
 	time "time"
 )
 
