@@ -30,6 +30,8 @@ go mod tidy
 ## Usage
 ``` sh
 microgen [OPTIONS]
+cd examples/addsvr
+go run ..\..\cmd\microgen\main.go -v 100 --file ./addsvc/api.go -out . -main -package github.com/dreamsxin/go-kitcli/examples/addsvc -.proto pb
 ```
 microgen tool search in file first `type * interface` with docs, that contains `// @microgen`.
 
